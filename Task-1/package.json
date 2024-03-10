@@ -1,0 +1,37 @@
+{
+  "name": "task-1",
+  "version": "1.0.0",
+  "description": "This is Task-1 by Dhruv Mehta",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DHRUV208/ReactAssignment.git"
+  },
+  "keywords": [
+    "react",
+    "assignment"
+  ],
+  "author": "Dhruv Mehta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DHRUV208/ReactAssignment/issues"
+  },
+  "homepage": "https://github.com/DHRUV208/ReactAssignment#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "postcss": "^8.4.35",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.51.0",
+    "react-router-dom": "^6.22.3"
+  }
+}
