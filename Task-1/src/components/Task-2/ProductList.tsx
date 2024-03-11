@@ -1,8 +1,16 @@
 import { useQuery } from "react-query";
 import { API } from "../../utils/constants";
 
+
+interface Product {
+  id: number; 
+  name: string;
+  description: string;
+  price: number;
+}
+
 const ProductList = () => {
-  const { data, isLoading, error } = useQuery("products", () =>
+  const { data, isLoading, error } = useQuery<Product[]>("products", () =>
     fetch(API).then((res) => res.json())
   );
   if (isLoading) return <div>Loading...</div>;
