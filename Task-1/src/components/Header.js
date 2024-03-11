@@ -11,7 +11,7 @@ const Header = () => {
                         <Link to="/">Form-1</Link>
                     </li>
                     <li className="px-4">
-                    <Link to="/form2">Form-2</Link>
+                    <Link to="/form">Form-2</Link>
                     </li>
                 </ul>
 
