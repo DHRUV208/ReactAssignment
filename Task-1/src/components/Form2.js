@@ -4,6 +4,8 @@ import One from "./One";
 const Form2 = () => {
   let [counters, setCounters] = useState(1);
   const [showIndex, setShowIndex] = useState(null);
+  
+
 
   const handleClick = () => {
     console.log("counter", counters);

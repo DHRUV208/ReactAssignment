@@ -5,15 +5,18 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Success from "./components/Success";
 import { Suspense, lazy } from "react";
+import DataProvider from "./context/dataProvider";
 
 const Task2 = lazy(()=>import ("./components/Task2"));
 
 const AppLayout = () => {
   return (
+    <DataProvider>
     <div className="app">
       <Header />
       <Outlet />
     </div>
+    </DataProvider>
   );
 };
 
