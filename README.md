@@ -7,7 +7,7 @@
    ```bash
    git clone (https://github.com/DHRUV208/ReactAssignment.git)
 
-   cd cd .\React-Frontend-Assignment\
+   cd .\React-Frontend-Assignment\
    
     npm install
 
