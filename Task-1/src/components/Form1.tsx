@@ -1,8 +1,11 @@
 import { useForm } from "react-hook-form";
 import {  useNavigate } from "react-router-dom";
+import { DataContext } from "../context/dataProvider";
+import { useContext } from "react";
 
 const Form1 = () => {
     const navigate = useNavigate();
+    const {setUserDetails} = useContext(DataContext);
   const {
     register,
     handleSubmit,
@@ -16,6 +19,14 @@ const Form1 = () => {
         onSubmit={handleSubmit((data) => {
           console.log(data);
           alert("Success");
+          setUserDetails({
+            "firstName": data.firstName,
+            "lastName": data.lastName,
+            "parentName": data.parentName,
+            "phoneNumber": data.phoneNumber,
+            "mail": data.mail,
+            "address": data.address
+        })
           navigate('/form');
         })}
       >
