@@ -7,7 +7,7 @@
    ```bash
    git clone (https://github.com/DHRUV208/ReactAssignment.git)
 
-   cd React-Frontend-Assignment
+   cd cd .\React-Frontend-Assignment\
    
     npm install
 
@@ -34,4 +34,14 @@ This React application leverages several powerful libraries and features to prov
 - **Lazy loading**
 - **React Context**  
 - **Code Reusability**
-- **Best Coding Practices**  
+- **Best Coding Practices**
+
+
+![image](https://github.com/DHRUV208/ReactAssignment/assets/53251381/bf532442-3f95-404c-8c9a-a3f22345a575)
+
+![image](https://github.com/DHRUV208/ReactAssignment/assets/53251381/a8f2d42e-3b43-43d1-9a33-24420639d852)
+
+![image](https://github.com/DHRUV208/ReactAssignment/assets/53251381/4452ffe6-e417-449a-94f5-ce1fdd622d3f)
+
+
+
