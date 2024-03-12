@@ -9,7 +9,7 @@ interface FamilyMember {
   age: number;
 }
 
-const One: React.FC = () => {
+const AddFamilyMemberForm: React.FC = () => {
   const {
     register,
     handleSubmit,
@@ -20,7 +20,7 @@ const One: React.FC = () => {
   return (
     <div className="flex justify-center items-end ">
       <div className="m-4 ">
-        Form-2
+        Family Member Form-2
         <form
           className="max-w-lg mx-auto mt-6 border border-black"
           onSubmit={handleSubmit((data: FamilyMember) => {
@@ -32,8 +32,6 @@ const One: React.FC = () => {
               age: data.age,
             });
             navigate("/success");
-
-            // setShowIndex(!showItems);
           })}
         >
           <div className="mb-4">
@@ -81,9 +79,7 @@ const One: React.FC = () => {
           <button
             className="cursor-pointer border border-black w-96 shadow-lg m-4 rounded-lg p-4"
             type="submit"
-            onClick={() => {
-              // navigate('/success');
-            }}
+            
           >
             Save
           </button>
@@ -93,4 +89,4 @@ const One: React.FC = () => {
   );
 };
 
-export default One;
+export default AddFamilyMemberForm;

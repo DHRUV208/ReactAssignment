@@ -8,7 +8,6 @@ const Task2: React.FC = () => {
     return (
         <QueryClientProvider client={queryClient}>
       <div>
-        {/* <h1>Product Management App</h1> */}
         <ProductList />
         <AddProductForm />
       </div>

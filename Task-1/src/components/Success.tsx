@@ -22,18 +22,16 @@ const Success: React.FC = () => {
 
   return (
     <div className="flex justify-around items-center">
-      {/* <h1>Success</h1> */}
+      <h1>Success</h1>
       <table className="border border-black">
         <thead className="m-4 p-4">
           <tr className="m-4 p-4">
-            {/* <th>ID</th> */}
             <th className="m-4 p-4">First Name</th>
             <th className="m-4 p-4">Last Name</th>
             <th className="m-4 p-4">Parent Name</th>
             <th className="m-4 p-4">Phone No.</th>
             <th className="m-4 p-4">Email</th>
             <th className="m-4 p-4">Address</th>
-          
           </tr>
         </thead>
         <tbody>
@@ -52,17 +50,13 @@ const Success: React.FC = () => {
       <table className="border border-black">
         <thead className="m-4 p-4">
           <tr className="m-4 p-4">
-            {/* <th>ID</th> */}
-            
             <th className="m-4 p-4">First Name</th>
             <th className="m-4 p-4">Last Name</th>
             <th className="m-4 p-4">Age</th>
-            
-          
           </tr>
         </thead>
         <tbody>
-        {addFamilyMember && ( // Check if addFamilyMember exists before accessing properties
+        {addFamilyMember && ( 
             <tr>
               <td>{addFamilyMember.firstName}</td>
               <td>{addFamilyMember.lastName}</td>

@@ -14,9 +14,7 @@ const AddProductForm: React.FC = () => {
     description: "",
     price: 0,
   });
-  // const [name, setName] = useState("");
-  // const [description, setDescription] = useState("");
-  // const [price, setPrice] = useState("");
+  
   const queryClient = useQueryClient();
 
   const addProduct = useMutation(

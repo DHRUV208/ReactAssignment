@@ -5,8 +5,6 @@ const Error: React.FC = () =>{
     console.log("err",error);
     return (
         <div>
-            <h1>ERROR</h1>
-            
             <h3>{error.statusText}</h3>
         </div>
     )

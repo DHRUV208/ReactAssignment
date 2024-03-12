@@ -1,17 +1,11 @@
 import { useState } from "react";
-import One from "./One";
+import AddFamilyMemberForm from "./AddFamilyMemberForm";
 
-const Form2: React.FC = () => {
+const FamilyInfoForm: React.FC = () => {
   let [counters, setCounters] = useState<number>(1);
-  const [showIndex, setShowIndex] = useState<boolean | null>(null);
-
-
 
   const handleClick = () => {
-    console.log("counter", counters);
-    setShowIndex(!showIndex);
-
-    setCounters(++counters);
+      setCounters(++counters);
   };
   return (
     <div className="" id="test">
@@ -21,9 +15,9 @@ const Form2: React.FC = () => {
         </button>
       </div>
       {[...Array(counters)].map((_, idx) => (
-        <One />
+        <AddFamilyMemberForm />
       ))}
     </div>
   );
 };
-export default Form2;
+export default FamilyInfoForm;

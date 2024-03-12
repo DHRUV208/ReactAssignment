@@ -12,7 +12,7 @@ interface User {
   address: string;
 }
 
-const Form1: React.FC = () => {
+const UserInfoForm: React.FC = () => {
     const navigate = useNavigate();
     const {setUserDetails} = useContext(DataContext);
   const {
@@ -22,7 +22,7 @@ const Form1: React.FC = () => {
   } = useForm<User>();
   return (
     <div className="">
-      <div className="m-4">Form-1</div>
+      <div className="m-4">User Info Form-1</div>
       <form
         className="max-w-lg mx-auto mt-6 border border-black"
         onSubmit={handleSubmit((data: User) => {
@@ -77,8 +77,8 @@ const Form1: React.FC = () => {
             type="number"
             className="w-96 shadow-lg"
             {...register("phoneNumber", {
-              minLength: {  value: 10,  message: "This input must contain atleast 10 characters" },
-            //   maxLength: { value: 11, message: "This input max 11 characters" },
+              minLength: {  value: 10,  message: "This input must contain 10 characters" },
+            
               required: true,
               pattern: {
                 value: /\d+/,
@@ -120,4 +120,4 @@ const Form1: React.FC = () => {
   );
 };
 
-export default Form1;
+export default UserInfoForm;
