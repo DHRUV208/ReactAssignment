@@ -4,7 +4,7 @@ import AddProductForm from './Task-2/AddProductForm';
 
 const queryClient = new QueryClient();
 
-const Task2 = () => {
+const Task2: React.FC = () => {
     return (
         <QueryClientProvider client={queryClient}>
       <div>

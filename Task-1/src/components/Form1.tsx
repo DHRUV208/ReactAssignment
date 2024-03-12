@@ -3,20 +3,29 @@ import {  useNavigate } from "react-router-dom";
 import { DataContext } from "../context/dataProvider";
 import { useContext } from "react";
 
-const Form1 = () => {
+interface User {
+  firstName: string;
+  lastName: string;
+  parentName: string;
+  phoneNumber: number;
+  mail: string;
+  address: string;
+}
+
+const Form1: React.FC = () => {
     const navigate = useNavigate();
     const {setUserDetails} = useContext(DataContext);
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<User>();
   return (
     <div className="">
       <div className="m-4">Form-1</div>
       <form
         className="max-w-lg mx-auto mt-6 border border-black"
-        onSubmit={handleSubmit((data) => {
+        onSubmit={handleSubmit((data: User) => {
           console.log(data);
           alert("Success");
           setUserDetails({

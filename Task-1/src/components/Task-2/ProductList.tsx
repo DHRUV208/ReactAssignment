@@ -10,11 +10,11 @@ interface Product {
 }
 
 const ProductList = () => {
-  const { data, isLoading, error } = useQuery<Product[]>("products", () =>
+  const { data, isLoading, error } = useQuery("products", () =>
     fetch(API).then((res) => res.json())
   );
   if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error.message}</div>;
+  // if (error) return <div>Error: {error.message}</div>;
 
   return (
     <div>

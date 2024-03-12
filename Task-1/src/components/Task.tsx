@@ -1,9 +1,9 @@
 import { useState } from "react";
 import One from "./One";
 
-const Task = () => {
+const Task: React.FC = () => {
 
-    let [counter, setCounter] = useState(1);
+    let [counter, setCounter] = useState<number>(1);
     const handleClick = () => {
         console.log("counter", counter);
         setCounter(counter++);

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import One from "./One";
 
-const Form2 = () => {
-  let [counters, setCounters] = useState(1);
-  const [showIndex, setShowIndex] = useState(null);
-  
+const Form2: React.FC = () => {
+  let [counters, setCounters] = useState<number>(1);
+  const [showIndex, setShowIndex] = useState<boolean | null>(null);
+
 
 
   const handleClick = () => {
@@ -21,7 +21,7 @@ const Form2 = () => {
         </button>
       </div>
       {[...Array(counters)].map((_, idx) => (
-        <One showItems={idx === showIndex && true} setShowIndex={() => setShowIndex(idx)}/>
+        <One />
       ))}
     </div>
   );

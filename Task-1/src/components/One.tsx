@@ -3,12 +3,18 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { DataContext } from "../context/dataProvider";
 
-const One = ({ showItems, setShowIndex }) => {
+interface FamilyMember {
+  firstName: string;
+  lastName: string;
+  age: number;
+}
+
+const One: React.FC = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<FamilyMember>();
   const navigate = useNavigate();
   const { setAddFamilyMember } = useContext(DataContext);
   return (
@@ -17,7 +23,7 @@ const One = ({ showItems, setShowIndex }) => {
         Form-2
         <form
           className="max-w-lg mx-auto mt-6 border border-black"
-          onSubmit={handleSubmit((data) => {
+          onSubmit={handleSubmit((data: FamilyMember) => {
             console.log(data);
             alert("Success");
             setAddFamilyMember({

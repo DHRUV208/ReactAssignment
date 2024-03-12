@@ -1,7 +1,22 @@
 import { useContext } from "react";
 import { DataContext } from "../context/dataProvider";
 
-const Success = () => {
+interface User {
+  firstName: string;
+  lastName: string;
+  parentName: string;
+  phoneNumber: number;
+  mail: string;
+  address: string;
+}
+
+interface FamilyMember { 
+  firstName: string;
+  lastName: string;
+  age: number;
+}
+
+const Success: React.FC = () => {
   const { userDetails } = useContext(DataContext);
   const { addFamilyMember } = useContext(DataContext);
 
@@ -22,18 +37,16 @@ const Success = () => {
           </tr>
         </thead>
         <tbody>
-        {/* {userDetails.map((user) => ( */}
-          <tr >
-            <td>{userDetails.firstName}</td>
-            <td>{userDetails.lastName}</td>
-            <td>{userDetails.parentName}</td>
-            <td>{userDetails.phoneNumber}</td>
-            <td>{userDetails.mail}</td>
-            <td>{userDetails.address}</td>
-            
-            {/* <td>{user.phoneNumber}</td> */}
-          </tr>
-        {/* ))} */}
+        {userDetails && ( 
+            <tr>
+              <td>{userDetails.firstName}</td>
+              <td>{userDetails.lastName}</td>
+              <td>{userDetails.parentName}</td>
+              <td>{userDetails.phoneNumber}</td>
+              <td>{userDetails.mail}</td>
+              <td>{userDetails.address}</td>
+            </tr>
+          )}
       </tbody>
       </table>
       <table className="border border-black">
@@ -49,25 +62,16 @@ const Success = () => {
           </tr>
         </thead>
         <tbody>
-        {/* {userDetails.map((user) => ( */}
-          <tr >
-            
-            <td>{addFamilyMember.firstName}</td>
-            <td>{addFamilyMember.lastName}</td>
-            <td>{addFamilyMember.age}</td>
-            {/* <td>{user.phoneNumber}</td> */}
-          </tr>
-        {/* ))} */}
+        {addFamilyMember && ( // Check if addFamilyMember exists before accessing properties
+            <tr>
+              <td>{addFamilyMember.firstName}</td>
+              <td>{addFamilyMember.lastName}</td>
+              <td>{addFamilyMember.age}</td>
+            </tr>
+          )}
       </tbody>
       </table>
-      {/* <h1>{userDetails.firstName}</h1>
-      <h1>{userDetails.lastName}</h1>
-      <h1>{userDetails.parentName}</h1>
-      <h1>{userDetails.phoneNumber}</h1>
-      <h1>{userDetails.mail}</h1>
-      <h1>{userDetails.address}</h1>
-      <h1>{addFamilyMember.firstName}</h1>
-      <h1>{addFamilyMember.age}</h1> */}
+      
     </div>
   );
 };
