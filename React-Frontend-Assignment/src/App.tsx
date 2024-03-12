@@ -1,15 +1,16 @@
-import Form1 from "./components/Form1";
-import Form2 from "./components/Form2";
+import UserInfoForm from "./components/UserInfoForm";
+import FamilyInfoForm from "./components/FamilyInfoForm";
 import Header from "./components/Header";
-import ReactDOM from "react-dom/client";
+import {createRoot} from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Success from "./components/Success";
 import { Suspense, lazy } from "react";
 import DataProvider from "./context/dataProvider";
+import Error from "./components/Error";
 
 const Task2 = lazy(()=>import ("./components/Task2"));
 
-const AppLayout = () => {
+const AppLayout: React.FC = () => {
   return (
     <DataProvider>
     <div className="app">
@@ -27,11 +28,11 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Form1 />,
+        element: <UserInfoForm />,
       },
       {
         path: "/form",
-        element: <Form2 />,
+        element: <FamilyInfoForm />,
       },
       {
         path: "/success",
@@ -47,8 +48,9 @@ const appRouter = createBrowserRouter([
         ),
       },
     ],
+    errorElement: <Error />
   },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = createRoot(document.getElementById("root") as HTMLElement);
 root.render(<RouterProvider router={appRouter} />);

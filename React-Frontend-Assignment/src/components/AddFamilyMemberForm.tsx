@@ -3,21 +3,27 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { DataContext } from "../context/dataProvider";
 
-const One = ({ showItems, setShowIndex }) => {
+interface FamilyMember {
+  firstName: string;
+  lastName: string;
+  age: number;
+}
+
+const AddFamilyMemberForm: React.FC = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<FamilyMember>();
   const navigate = useNavigate();
   const { setAddFamilyMember } = useContext(DataContext);
   return (
     <div className="flex justify-center items-end ">
       <div className="m-4 ">
-        Form-2
+        Family Member Form-2
         <form
           className="max-w-lg mx-auto mt-6 border border-black"
-          onSubmit={handleSubmit((data) => {
+          onSubmit={handleSubmit((data: FamilyMember) => {
             console.log(data);
             alert("Success");
             setAddFamilyMember({
@@ -26,8 +32,6 @@ const One = ({ showItems, setShowIndex }) => {
               age: data.age,
             });
             navigate("/success");
-
-            // setShowIndex(!showItems);
           })}
         >
           <div className="mb-4">
@@ -75,9 +79,7 @@ const One = ({ showItems, setShowIndex }) => {
           <button
             className="cursor-pointer border border-black w-96 shadow-lg m-4 rounded-lg p-4"
             type="submit"
-            onClick={() => {
-              // navigate('/success');
-            }}
+            
           >
             Save
           </button>
@@ -87,4 +89,4 @@ const One = ({ showItems, setShowIndex }) => {
   );
 };
 
-export default One;
+export default AddFamilyMemberForm;
