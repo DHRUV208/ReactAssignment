@@ -45,3 +45,8 @@ This React application leverages several powerful libraries and features to prov
 
 
 
+## Connect with Dhruv Mehta 
+1. Linkedin - https://www.linkedin.com/in/dhruv-mehta-2172b4190/
+2. Google Drive Link for Resume - https://drive.google.com/file/d/1a4hkih7vzM0BU0i5bFiElQRldIR_9n8i/view?usp=sharing 
+
+
